@@ -1,4 +1,5 @@
+# search /usr/local first, then /usr/include
 glpk_wrapper.c: glpk.i
-	@SWIG@ -I/usr/local/include -ruby -w801 -o $@ $?
+	@SWIG@ -I/usr/local/include -I/usr/include -ruby -w801 -o $@ $?
 wrap: glpk_wrapper.c
 	cp $? ../ext/$?
