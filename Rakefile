@@ -55,7 +55,7 @@ CLEAN.include('ext/Makefile', 'ext/conftest.dSYM', 'ext/mkmf.log',
 file 'ext/glpk_wrapper.c' => 'swig/glpk.i' do
   in_dir('swig') do
     system("autoconf")
-    system("configure")
+    system("./configure")
     system("make wrap")
   end
 end
